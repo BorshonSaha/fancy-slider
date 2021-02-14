@@ -82,12 +82,10 @@ const createSlider = () => {
   imagesArea.style.display = 'none';
   let duration = document.getElementById('duration').value || 1000;
   if (duration < 0) {
-    alert('Duration cannot be negative');
-    duration = (-1) * duration * 1000;
+    alert("Duration cannot be negative");
+    duration = (-1) * duration;
   }
-  else{
-    duration *= 1000;
-  }
+
   sliders.forEach(slide => {
     let item = document.createElement('div')
     item.className = "slider-item";
