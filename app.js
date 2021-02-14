@@ -14,6 +14,15 @@ search.addEventListener("keyup", function (event) {
   }
 })
 
+// Enter button integrated with create slider button
+const duration = document.getElementById("duration");
+duration.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("create-slider").click();
+  }
+})
+
 // selected image 
 let sliders = [];
 
